@@ -6,17 +6,6 @@ import (
 	"fmt"
 )
 
-// ProjectMetadata holds the metadata of a project.
-type ProjectMetadata struct {
-	ID           int64     `json:"id"`
-	ProjectID    int64     `json:"project_id"`
-	Name         string    `json:"name"`
-	Value        string    `json:"value"`
-	CreationTime time.Time `json:"creation_time"`
-	UpdateTime   time.Time `json:"update_time"`
-	Deleted      bool      `json:"deleted"`
-}
-
 // Project holds the details of a project.
 type Project struct {
 	ProjectID    int64             `json:"project_id"`
@@ -24,7 +13,7 @@ type Project struct {
 	Name         string            `json:"name"`
 	CreationTime time.Time         `json:"creation_time"`
 	UpdateTime   time.Time         `json:"update_time"`
-	Deleted      bool              `json:"deleted"`
+	Deleted      interface{}       `json:"deleted"`
 	OwnerName    string            `json:"owner_name"`
 	Togglable    bool              `json:"togglable"`
 	Role         int               `json:"current_user_role_id"`
