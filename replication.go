@@ -1,6 +1,9 @@
 package harbor
 
-import "github.com/parnurzeal/gorequest"
+import (
+	"fmt"
+	"github.com/parnurzeal/gorequest"
+)
 
 type ReplicationsService struct {
 	client *Client
